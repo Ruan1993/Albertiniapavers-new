@@ -1324,10 +1324,9 @@
               </a>
             </div>
           </div>
-
-          <!-- Contact Form -->
-          <div class="lg:col-span-3 p-8">
-            <h3
+              <!-- Contact Form -->
+          <div class="lg:col-span-3 p-8 hovered-element">
+<h3
               class="text-3xl font-bold text-neon-green mb-6 font-['Orbitron']"
             >
               Send a Message
@@ -1371,13 +1370,29 @@
                   class="w-full p-4 bg-custom-black border-2 border-neon-green/30 focus:border-neon-green focus:ring-2 focus:ring-neon-green/50 text-gray-100 rounded-lg transition duration-300 focus:outline-none placeholder:text-gray-500"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="w-full bg-neon-green hover:bg-shock-green text-custom-black font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-neon-green/30 hover:shadow-xl hover:shadow-neon-green/50 border-2 border-neon-green text-lg"
-              >
-                SUBMIT INQUIRY
-              </button>
-              <!-- Message Box for Form Feedback -->
+              <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex-1">
+                  <label for="phone" class="sr-only">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your Phone Number"
+                    class="w-full p-4 bg-custom-black border-2 border-neon-green/30 focus:border-neon-green focus:ring-2 focus:ring-neon-green/50 text-gray-100 rounded-lg transition duration-300 focus:outline-none placeholder:text-gray-500 hovered-element"
+                  />
+                </div>
+                <div class="flex-1">
+                  <button
+                    type="submit"
+                    class="w-full bg-neon-green hover:bg-shock-green text-custom-black font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-neon-green/40 hover:shadow-2xl hover:shadow-neon-green/60 border-2 border-neon-green text-lg relative overflow-hidden group"
+                  >
+                    <span class="relative z-10 hover:text-shock-green">SUBMIT INQUIRY</span>
+                    <span class="absolute inset-0 bg-gradient-to-r from-neon-green/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="absolute inset-0 bg-neon-green/10 opacity-0 group-active:opacity-100 transition-opacity duration-100"></span>
+                  </button>
+                </div>
+              </div>
+<!-- Message Box for Form Feedback -->
               <div
                 id="formMessage"
                 class="hidden mt-4 p-4 text-center rounded-lg font-bold"
@@ -1387,9 +1402,13 @@
         </div>
       </div>
     </section>
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-black/20 backdrop-blur-sm border border-neon-green/20 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 transition-all duration-300 opacity-0 invisible">
+      <i data-feather="arrow-up" class="w-6 h-6"></i>
+    </button>
 
     <!-- Footer -->
-    <footer class="bg-custom-black border-t border-neon-green/20 mt-12 py-8">
+<footer class="bg-custom-black border-t border-neon-green/20 mt-12 py-8">
       <div class="container mx-auto px-4 text-center">
         <p class="text-sm text-gray-500 font-['Rajdhani']">
           &copy; <span id="currentYear"></span> Albertinia Pavers. All rights
@@ -1868,10 +1887,34 @@
         // Initialize the first dot as active
         if (projectDots.length > 0) moveToProjectSlide(0);
       }
+      // Back to Top Button Logic
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      
+      window.onscroll = function() {
+        scrollFunction();
+        updateActiveNav(); // Keep existing scroll handler
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          backToTopBtn.classList.remove("opacity-0", "invisible");
+          backToTopBtn.classList.add("opacity-100", "visible");
+        } else {
+          backToTopBtn.classList.remove("opacity-100", "visible");
+          backToTopBtn.classList.add("opacity-0", "invisible");
+        }
+      }
+
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
 
       // --- Main Initialization ---
       window.onload = function () {
-        document.getElementById("currentYear").textContent =
+document.getElementById("currentYear").textContent =
           new Date().getFullYear();
 
         // 1. Initialize Feather Icons
