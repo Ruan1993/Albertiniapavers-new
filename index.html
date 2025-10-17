@@ -129,6 +129,9 @@
       #productModal {
         transition: opacity 0.3s ease-in-out;
       }
+      .lightbox-trigger {
+        cursor: zoom-in;
+      }
     </style>
   </head>
   <body class="font-['Rajdhani'] text-gray-200">
@@ -361,7 +364,8 @@
                 <img
                   data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Paving1.jpg"
                   alt="Premium Paving"
-                  class="w-full h-full object-cover lozad"
+                  class="w-full h-full object-cover lozad lightbox-trigger"
+                  data-gallery="home"
                   onerror="this.onerror=null; this.src='https://placehold.co/1200x600/050505/39FF14?text=Premium+Paving';"
                 />
               </div>
@@ -372,7 +376,8 @@
                 <img
                   data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Paving2.jpg"
                   alt="Elegant Paving"
-                  class="w-full h-full object-cover lozad"
+                  class="w-full h-full object-cover lozad lightbox-trigger"
+                  data-gallery="home"
                   onerror="this.onerror=null; this.src='https://placehold.co/1200x600/050505/39FF14?text=Elegant+Paving';"
                 />
               </div>
@@ -383,7 +388,8 @@
                 <img
                   data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/factory.jpg"
                   alt="Our Manufacturing Facility"
-                  class="w-full h-full object-cover lozad"
+                  class="w-full h-full object-cover lozad lightbox-trigger"
+                  data-gallery="home"
                   onerror="this.onerror=null; this.src='https://placehold.co/1200x600/050505/39FF14?text=Factory+Image';"
                 />
               </div>
@@ -391,15 +397,15 @@
             <!-- Slider Controls -->
             <button
               id="prevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-left" class="w-8 h-8"></i>
+              <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="nextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-right" class="w-8 h-8"></i>
+              <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
@@ -442,7 +448,6 @@
             solutions to builders, contractors, and homeowners. We have built a
             reputation for excellence, reliability, and affordability.
           </p>
-
           <h3
             class="text-2xl font-bold mb-10 text-neon-green font-['Orbitron']"
           >
@@ -466,8 +471,7 @@
                 Local Excellence
               </h4>
               <p class="text-gray-300">
-                Proudly South African manufacturing supporting the local economy
-                with superior products.
+                We support the South African construction industry.
               </p>
             </div>
             <div
@@ -485,8 +489,7 @@
                 Premium Quality
               </h4>
               <p class="text-gray-300">
-                Industry-leading standards for lasting durability and a
-                beautiful, enduring finish.
+                Our paving and building blocks are made to last.
               </p>
             </div>
             <div
@@ -501,11 +504,10 @@
               <h4
                 class="text-xl font-bold text-neon-green mb-2 font-['Orbitron']"
               >
-                Best Value
+                Competitive Pricing
               </h4>
               <p class="text-gray-300">
-                Competitive, transparent pricing without ever compromising on
-                material quality.
+                Get high-quality products at affordable prices.
               </p>
             </div>
             <div
@@ -520,14 +522,25 @@
               <h4
                 class="text-xl font-bold text-neon-green mb-2 font-['Orbitron']"
               >
-                Expert Service
+                Reliable Service
               </h4>
               <p class="text-gray-300">
-                A professional, dedicated team ready to guide you to your
-                perfect paving solution.
+                We value customer satisfaction and provide excellent support.
               </p>
             </div>
           </div>
+
+          <h3 class="text-2xl font-bold mb-6 text-neon-green font-['Orbitron']">
+            Our Commitment
+          </h3>
+          <p
+            class="text-xl text-gray-300 mb-12 leading-relaxed p-4 bg-black/50 rounded-lg border border-neon-green/10"
+          >
+            At Albertinia Pavers, we believe in long-lasting quality,
+            professional service, and customer satisfaction. Whether you need
+            interlocking paving, retaining blocks, or cement bricks, we have the
+            right products for your project.
+          </p>
 
           <!-- FAQ Accordion -->
           <h3
@@ -648,7 +661,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/BOND-PAVER_GREY-SMALL_grande.png"
                     alt="Bevel Pavers"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="products"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Bevel+Pavers';"
                   />
                 </div>
@@ -677,7 +691,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Cement brick.png"
                     alt="Cement Bricks"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="products"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Cement+Bricks';"
                   />
                 </div>
@@ -705,7 +720,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Interlocking Pavers.png"
                     alt="Interlocking Paving"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="products"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Interlocking+Pavers';"
                   />
                 </div>
@@ -733,7 +749,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Retaining blocks.png"
                     alt="Retaining Blocks"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="products"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Retaining+Blocks';"
                   />
                 </div>
@@ -761,7 +778,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Building block.png"
                     alt="Building Blocks"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="products"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Building+Blocks';"
                   />
                 </div>
@@ -781,15 +799,15 @@
             <!-- Product Slider Controls -->
             <button
               id="productPrevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-left" class="w-6 h-6"></i>
+              <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="productNextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-right" class="w-6 h-6"></i>
+              <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
           <!-- Product Dots (Pagination) -->
@@ -850,10 +868,10 @@
             </div>
             <p class="text-gray-300 italic mb-4">
               "The bevel pavers are outstanding quality. Delivery was prompt,
-              and the team provided excellent guidance on installation. Our
-              patio looks incredible!"
+              and the team provided excellent guidance and even installation!
+              Our patio looks incredible!"
             </p>
-            <p class="text-neon-green font-bold">- John D. (Mossel Bay)</p>
+            <p class="text-neon-green font-bold">- Zelmari Steenkamp</p>
           </div>
           <!-- Review 2 -->
           <div
@@ -871,7 +889,7 @@
               quality and uniformity were perfect, making the build process very
               smooth. Great value for money."
             </p>
-            <p class="text-neon-green font-bold">- Sarah K. (Stilbaai)</p>
+            <p class="text-neon-green font-bold">- Riaan Pienaar</p>
           </div>
           <!-- Review 3 -->
           <div
@@ -885,13 +903,12 @@
               <i data-feather="star" class="w-5 h-5 fill-current"></i>
             </div>
             <p class="text-gray-300 italic mb-4">
-              "Needed interlocking pavers for a large industrial yard.
-              Albertinia Pavers delivered on time and the product is incredibly
-              durable. Highly recommended to contractors."
+              "Baie dankie aan julle span vir die uitstekende werk met ons
+              parkeerarea. Die paving is pragtig afgewerk, prakties en gee ’n
+              professionele eerste indruk vir ons kliënte. Julle diens was
+              vinnig, netjies en betroubaar!"
             </p>
-            <p class="text-neon-green font-bold">
-              - Builder's Choice (Albertinia)
-            </p>
+            <p class="text-neon-green font-bold">- WT Slaghuis (Albertinia)</p>
           </div>
         </div>
       </div>
@@ -933,7 +950,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark1.jpg"
                     alt="Project 1"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+1';"
                   />
                 </div>
@@ -966,7 +984,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark2.jpg"
                     alt="Project 2"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+2';"
                   />
                 </div>
@@ -997,7 +1016,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark3.jpg"
                     alt="Project 3"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+3';"
                   />
                 </div>
@@ -1031,7 +1051,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark4.jpg"
                     alt="Project 4"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+4';"
                   />
                 </div>
@@ -1063,7 +1084,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark5.jpg"
                     alt="Project 5"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+5';"
                   />
                 </div>
@@ -1095,7 +1117,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed1.png"
                     alt="Project 7"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+7';"
                   />
                 </div>
@@ -1127,7 +1150,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed.png"
                     alt="Project 8"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+8';"
                   />
                 </div>
@@ -1159,7 +1183,8 @@
                   <img
                     data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed5.png"
                     alt="Project 9"
-                    class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105"
+                    class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
+                    data-gallery="projects"
                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+9';"
                   />
                 </div>
@@ -1183,15 +1208,15 @@
             <!-- Project Slider Controls -->
             <button
               id="projectPrevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-left" class="w-6 h-6"></i>
+              <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="projectNextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-3 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
-              <i data-feather="chevron-right" class="w-6 h-6"></i>
+              <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
           <!-- Project Dots (Pagination) -->
@@ -1354,8 +1379,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  required
-                  placeholder="Your Email Address"
+                  placeholder="Your Email Address (Optional)"
                   class="w-full p-4 bg-custom-black border-2 border-neon-green/30 focus:border-neon-green focus:ring-2 focus:ring-neon-green/50 text-gray-100 rounded-lg transition duration-300 focus:outline-none placeholder:text-gray-500"
                 />
               </div>
@@ -1413,11 +1437,10 @@
       onclick="topFunction()"
       id="backToTopBtn"
       title="Go to top"
-      class="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-black/20 backdrop-blur-sm border border-neon-green/20 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 transition-all duration-300 opacity-0 invisible"
+      class="fixed bottom-8 right-8 z-40 p-2 rounded-full bg-black/20 backdrop-blur-sm border border-neon-green/20 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 transition-all duration-300 opacity-0 invisible"
     >
-      <i data-feather="arrow-up" class="w-6 h-6"></i>
+      <i data-feather="arrow-up" class="w-4 h-4"></i>
     </button>
-
     <!-- Footer -->
     <footer class="bg-custom-black border-t border-neon-green/20 mt-12 py-8">
       <div class="container mx-auto px-4 text-center">
@@ -1510,6 +1533,43 @@
       </div>
     </div>
 
+    <!-- Image Lightbox Modal -->
+    <div
+      id="imageLightbox"
+      class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300"
+    >
+      <button
+        id="closeLightboxBtn"
+        class="absolute top-4 right-4 text-white hover:text-neon-green transition-colors duration-300 z-[102]"
+      >
+        <i data-feather="x" class="w-10 h-10"></i>
+      </button>
+      <button
+        id="prevLightboxBtn"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/50 transition duration-300 z-[102]"
+      >
+        <i data-feather="chevron-left" class="w-8 h-8"></i>
+      </button>
+      <button
+        id="nextLightboxBtn"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/50 transition duration-300 z-[102]"
+      >
+        <i data-feather="chevron-right" class="w-8 h-8"></i>
+      </button>
+      <div class="relative w-full h-full flex items-center justify-center">
+        <img
+          id="lightboxImage"
+          src=""
+          alt="Fullscreen image"
+          class="max-w-full max-h-full object-contain"
+        />
+        <div
+          id="lightboxCaption"
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black/50 px-4 py-2 rounded-lg"
+        ></div>
+      </div>
+    </div>
+
     <script>
       // --- Data Store for Product Modal ---
       const productsData = [
@@ -1575,7 +1635,7 @@
           ],
         },
         {
-          name: "Building Blocks",
+          name: "Building Blocks (M7/M9)",
           description:
             "Cost-effective and large-format building blocks that speed up construction time without compromising on strength. Ideal for boundary walls and internal partitioning.",
           image:
@@ -1795,7 +1855,11 @@
        */
       function setupProductModalListeners() {
         document.querySelectorAll(".product-slide").forEach((slide) => {
-          slide.addEventListener("click", () => {
+          // Prevent the lightbox from opening when clicking the product slide itself
+          slide.addEventListener("click", (e) => {
+            if (e.target.classList.contains("lightbox-trigger")) {
+              return; // Let the lightbox handler take over
+            }
             const productId = parseInt(slide.getAttribute("data-product-id"));
             openProductModal(productId);
           });
@@ -1898,6 +1962,87 @@
         // Initialize the first dot as active
         if (projectDots.length > 0) moveToProjectSlide(0);
       }
+
+      // --- Image Lightbox Logic ---
+      const lightbox = document.getElementById("imageLightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      const closeLightboxBtn = document.getElementById("closeLightboxBtn");
+      const prevLightboxBtn = document.getElementById("prevLightboxBtn");
+      const nextLightboxBtn = document.getElementById("nextLightboxBtn");
+
+      let currentImageIndex;
+      let currentGallery = [];
+
+      function openLightbox(e) {
+        const clickedImage = e.target;
+        const galleryName = clickedImage.getAttribute("data-gallery");
+        if (!galleryName) return;
+
+        currentGallery = Array.from(
+          document.querySelectorAll(
+            `.lightbox-trigger[data-gallery="${galleryName}"]`
+          )
+        );
+        currentImageIndex = currentGallery.indexOf(clickedImage);
+
+        updateLightboxImage();
+
+        lightbox.classList.remove("hidden");
+        setTimeout(() => lightbox.classList.remove("opacity-0"), 10);
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add("opacity-0");
+        setTimeout(() => lightbox.classList.add("hidden"), 300);
+        document.body.style.overflow = "";
+      }
+
+      function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+        updateLightboxImage();
+      }
+
+      function showPrevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + currentGallery.length) %
+          currentGallery.length;
+        updateLightboxImage();
+      }
+
+      function updateLightboxImage() {
+        const imageElement = currentGallery[currentImageIndex];
+        const imageSrc =
+          imageElement.getAttribute("data-src") || imageElement.src;
+        lightboxImage.src = imageSrc;
+        lightboxCaption.textContent = `${currentImageIndex + 1} / ${
+          currentGallery.length
+        }`;
+      }
+
+      function setupLightbox() {
+        document.querySelectorAll(".lightbox-trigger").forEach((img) => {
+          img.addEventListener("click", openLightbox);
+        });
+
+        closeLightboxBtn.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+        nextLightboxBtn.addEventListener("click", showNextImage);
+        prevLightboxBtn.addEventListener("click", showPrevImage);
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (!lightbox.classList.contains("hidden")) {
+            if (e.key === "ArrowRight") showNextImage();
+            if (e.key === "ArrowLeft") showPrevImage();
+            if (e.key === "Escape") closeLightbox();
+          }
+        });
+      }
+
       // Back to Top Button Logic
       const backToTopBtn = document.getElementById("backToTopBtn");
 
@@ -1935,7 +2080,14 @@
         initFeatherIcons();
 
         // 2. Initialize Lozad.js (Lazy Loader) for images
-        const observer = lozad(".lozad");
+        const observer = lozad(".lozad", {
+          loaded: function (el) {
+            // Once an image is loaded, it can be part of the lightbox
+            el.classList.add("lightbox-trigger");
+            // Re-setup lightbox to include newly loaded images
+            setupLightbox();
+          },
+        });
         observer.observe();
 
         // 3. Setup Event Listeners
@@ -1948,6 +2100,8 @@
         setupProjectSlider();
         setupProductModalListeners();
         setupContactForm();
+        setupLightbox(); // Initial setup for non-lazy images
+
         // 4. Close mobile menu on link click
         document.querySelectorAll(".mobile-nav-link").forEach((link) => {
           link.addEventListener("click", toggleMobileMenu);
