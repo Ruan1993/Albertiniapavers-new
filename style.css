@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;700&display=swap");
+
+/* Custom Neon Colors */
+.text-shock-green {
+  color: #00ff41;
+}
+.text-neon-green {
+  color: #39ff14;
+}
+.border-neon {
+  border-color: #39ff14;
+}
+.bg-custom-black {
+  background-color: #000000;
+}
+
+/* Neon Text Shadow/Glow */
+.text-shadow-neon-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.6),
+    0 0 20px rgba(57, 255, 20, 0.4);
+}
+.glow-box {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+.hover\:glow-text-intense:hover {
+  text-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14;
+}
+
+body {
+font-size: 1.1rem;
+background-color: #000000; /* Fallback black color */
+
+/* This creates two background layers:
+  1. A transparent black overlay (at 85% opacity)
+  2. New brick image
+*/
+background-image: 
+linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.888)),
+url("/photos/Brick-background2.jpeg"); /* <-- IMPORTANT: Update this path for! */
+
+background-size: cover; /* Scales the image to fill the screen */
+background-position: center center; /* Centers the image */
+background-attachment: fixed; /* Keeps the cool "parallax" effect */
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Universal Styling */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+img,
+video,
+iframe,
+svg,
+canvas,
+button,
+input,
+select,
+textarea,
+.nav-link,
+.mobile-nav-link,
+.rounded-lg,
+.rounded-xl {
+  border-radius: 8px; /* Consistent rounded corners */
+}
+html {
+  scroll-behavior: smooth;
+} /* Smooth scroll behavior */
+
+/* Active nav link styling */
+.nav-link.active,
+.mobile-nav-link.active {
+  color: #00ff41;
+  font-weight: 700;
+}
+.nav-link.active span:first-child,
+.mobile-nav-link.active span:first-child {
+  text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
+}
+/* Hover state for "Why Choose Us" cards */
+.feature-card {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.feature-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(57, 255, 20, 0.4);
+  border-color: #39ff14;
+}
+
+/* Modal Styling */
+#productModal {
+  transition: opacity 0.3s ease-in-out;
+}
+.lightbox-trigger {
+  cursor: zoom-in;
+}

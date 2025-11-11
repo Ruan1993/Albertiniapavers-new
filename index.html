@@ -6,136 +6,13 @@
     <title>Albertinia Pavers - Premium Paving Solutions</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Feather Icons for vector icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <!-- Lozad.js for image lazy loading -->
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;700&display=swap");
-
-      /* Custom Neon Colors */
-      .text-shock-green {
-        color: #00ff41;
-      }
-      .text-neon-green {
-        color: #39ff14;
-      }
-      .border-neon {
-        border-color: #39ff14;
-      }
-      .bg-custom-black {
-        background-color: #000000;
-      }
-
-      /* Neon Text Shadow/Glow */
-      .text-shadow-neon-green {
-        text-shadow: 0 0 10px rgba(57, 255, 20, 0.6),
-          0 0 20px rgba(57, 255, 20, 0.4);
-      }
-      .glow-box {
-        box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
-      }
-      .hover\:glow-text-intense:hover {
-        text-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14;
-      }
-
-      /* Typography and Responsiveness */
-      body {
-        font-size: 1.1rem;
-        background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
-        background-color: #000000;
-        background-attachment: fixed;
-      }
-      h1 {
-        font-size: 3.5rem;
-      }
-      h2 {
-        font-size: 2.5rem;
-      }
-      h3 {
-        font-size: 2rem;
-      }
-      h4 {
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-        h2 {
-          font-size: 2rem;
-        }
-        h3 {
-          font-size: 1.7rem;
-        }
-        h4 {
-          font-size: 1.3rem;
-        }
-        p {
-          font-size: 1.1rem;
-        }
-      }
-
-      /* Universal Styling */
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
-      img,
-      video,
-      iframe,
-      svg,
-      canvas,
-      button,
-      input,
-      select,
-      textarea,
-      .nav-link,
-      .mobile-nav-link,
-      .rounded-lg,
-      .rounded-xl {
-        border-radius: 8px; /* Consistent rounded corners */
-      }
-      html {
-        scroll-behavior: smooth;
-      } /* Smooth scroll behavior */
-
-      /* Active nav link styling */
-      .nav-link.active,
-      .mobile-nav-link.active {
-        color: #00ff41;
-        font-weight: 700;
-      }
-      .nav-link.active span:first-child,
-      .mobile-nav-link.active span:first-child {
-        text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
-      }
-      /* Hover state for "Why Choose Us" cards */
-      .feature-card {
-        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-      }
-      .feature-card:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 15px 30px rgba(57, 255, 20, 0.4);
-        border-color: #39ff14;
-      }
-
-      /* Modal Styling */
-      #productModal {
-        transition: opacity 0.3s ease-in-out;
-      }
-      .lightbox-trigger {
-        cursor: zoom-in;
-      }
-    </style>
+    
+    <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body class="font-['Rajdhani'] text-gray-200">
-    <!-- Navigation -->
     <nav
       class="border-b border-neon border-opacity-20 py-4 sticky top-0 bg-custom-black bg-opacity-90 backdrop-blur-sm z-50 rounded-b-lg"
     >
@@ -145,7 +22,6 @@
         >
           ALBERTINIA PAVERS
         </div>
-        <!-- Desktop Nav Links -->
         <div class="hidden md:flex space-x-6">
           <a
             href="#home"
@@ -220,14 +96,12 @@
             ></span>
           </a>
         </div>
-        <!-- Mobile Menu Button -->
         <button
           class="md:hidden text-neon-green hover:text-shock-green transition-all duration-300 transform hover:scale-110"
           id="mobileMenuButton"
         >
           <i data-feather="menu" class="w-8 h-8"></i>
         </button>
-        <!-- Mobile Menu Content (Hidden by default) -->
         <div
           id="mobileMenu"
           class="hidden md:hidden absolute top-full left-0 right-0 bg-custom-black bg-opacity-95 backdrop-blur-sm border-t border-neon border-opacity-20 rounded-b-lg"
@@ -312,10 +186,9 @@
       </div>
     </nav>
 
-    <!-- Home Section -->
     <section
       id="home"
-      class="relative h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0"
+      class="relative flex justify-center overflow-hidden pt-32 pb-20 md:pt-30 md:pb-32"
     >
       <div class="container mx-auto px-4 z-10">
         <div
@@ -348,9 +221,8 @@
             </a>
           </div>
 
-          <!-- Home Slider for showcase images -->
           <div
-            class="relative w-full h-[50vh] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20"
+            class="relative w-full h-[50vh] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20 bg-black/80"
           >
             <div
               class="relative h-full flex transition-transform duration-500 ease-in-out"
@@ -360,9 +232,8 @@
               <div
                 class="min-w-full h-full group relative overflow-hidden flex items-center justify-center"
               >
-                <!-- LoZad for lazy loading -->
                 <img
-                  data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Paving1.jpg"
+                  data-src="photos/Paving1.jpg"
                   alt="Premium Paving"
                   class="w-full h-full object-cover lozad lightbox-trigger"
                   data-gallery="home"
@@ -372,9 +243,8 @@
               <div
                 class="min-w-full h-full group relative overflow-hidden flex items-center justify-center"
               >
-                <!-- LoZad for lazy loading -->
                 <img
-                  data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Paving2.jpg"
+                  data-src="photos/Paving2.jpg"
                   alt="Elegant Paving"
                   class="w-full h-full object-cover lozad lightbox-trigger"
                   data-gallery="home"
@@ -384,9 +254,8 @@
               <div
                 class="min-w-full h-full group relative overflow-hidden flex items-center justify-center"
               >
-                <!-- LoZad for lazy loading -->
                 <img
-                  data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/factory.jpg"
+                  data-src="photos/factory.jpg"
                   alt="Our Manufacturing Facility"
                   class="w-full h-full object-cover lozad lightbox-trigger"
                   data-gallery="home"
@@ -394,23 +263,21 @@
                 />
               </div>
             </div>
-            <!-- Slider Controls -->
             <button
               id="prevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="nextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
       </div>
-      <!-- Scroll Down Indicator -->
       <div
         class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
@@ -422,8 +289,7 @@
 
     <div class="h-px bg-neon-green/20 w-4/5 mx-auto my-12"></div>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-custom-black">
+    <section id="about" class="py-20 bg">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2
@@ -439,7 +305,7 @@
             Our Story
           </h3>
           <p
-            class="text-xl text-gray-300 mb-12 leading-relaxed p-4 bg-black/50 rounded-lg border border-neon-green/10"
+            class="text-xl text-gray-300 mb-12 leading-relaxed p-4 bg-black/80 rounded-lg border border-neon-green/10 bg-black/80"
           >
             Albertinia Pavers is a locally owned company specializing in
             manufacturing high-quality paving and construction materials.
@@ -457,7 +323,7 @@
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           >
             <div
-              class="feature-card text-center p-6 bg-black/50 rounded-xl border border-neon-green/20 transition-all duration-500 ease-in-out"
+              class="feature-card text-center p-6 bg-black/80 rounded-xl border border-neon-green/20 bg-black/80 transition-all duration-500 ease-in-out"
             >
               <div class="mb-4 flex justify-center">
                 <i
@@ -475,7 +341,7 @@
               </p>
             </div>
             <div
-              class="feature-card text-center p-6 bg-black/50 rounded-xl border border-neon-green/20 transition-all duration-500 ease-in-out"
+              class="feature-card text-center p-6 bg-black/80 rounded-xl border border-neon-green/20 bg-black/80 transition-all duration-500 ease-in-out"
             >
               <div class="mb-4 flex justify-center">
                 <i
@@ -493,7 +359,7 @@
               </p>
             </div>
             <div
-              class="feature-card text-center p-6 bg-black/50 rounded-xl border border-neon-green/20 transition-all duration-500 ease-in-out"
+              class="feature-card text-center p-6 bg-black/80 rounded-xl border border-neon-green/20 bg-black/80 transition-all duration-500 ease-in-out"
             >
               <div class="mb-4 flex justify-center">
                 <i
@@ -511,7 +377,7 @@
               </p>
             </div>
             <div
-              class="feature-card text-center p-6 bg-black/50 rounded-xl border border-neon-green/20 transition-all duration-500 ease-in-out"
+              class="feature-card text-center p-6 bg-black/80 rounded-xl border border-neon-green/20 bg-black/80 transition-all duration-500 ease-in-out"
             >
               <div class="mb-4 flex justify-center">
                 <i
@@ -534,7 +400,7 @@
             Our Commitment
           </h3>
           <p
-            class="text-xl text-gray-300 mb-12 leading-relaxed p-4 bg-black/50 rounded-lg border border-neon-green/10"
+            class="text-xl text-gray-300 mb-12 leading-relaxed p-4 bg-black/80 rounded-lg border border-neon-green/10 bg-black/80"
           >
             At Albertinia Pavers, we believe in long-lasting quality,
             professional service, and customer satisfaction. Whether you need
@@ -542,7 +408,6 @@
             right products for your project.
           </p>
 
-          <!-- FAQ Accordion -->
           <h3
             class="text-2xl font-bold mb-10 text-neon-green font-['Orbitron']"
           >
@@ -550,7 +415,7 @@
           </h3>
           <div class="max-w-3xl mx-auto">
             <div
-              class="border border-neon-green/20 rounded-lg mb-4 bg-black/50 accordion-item"
+              class="border border-neon-green/20 bg-black/80 rounded-lg mb-4 bg-black/80 accordion-item"
             >
               <button
                 class="flex justify-between items-center w-full p-5 text-left font-bold text-neon-green hover:bg-black/60 transition duration-300 rounded-lg focus:outline-none"
@@ -563,7 +428,7 @@
                 ></i>
               </button>
               <div
-                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 hidden accordion-content"
+                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 bg-black/80 hidden accordion-content"
               >
                 Our comprehensive services, covering both material supply and
                 professional installation, proudly extend across the Western
@@ -573,7 +438,7 @@
               </div>
             </div>
             <div
-              class="border border-neon-green/20 rounded-lg mb-4 bg-black/50 accordion-item"
+              class="border border-neon-green/20 bg-black/80 rounded-lg mb-4 bg-black/80 accordion-item"
             >
               <button
                 class="flex justify-between items-center w-full p-5 text-left font-bold text-neon-green hover:bg-black/60 transition duration-300 rounded-lg focus:outline-none"
@@ -586,7 +451,7 @@
                 ></i>
               </button>
               <div
-                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 hidden accordion-content"
+                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 bg-black/80 hidden accordion-content"
               >
                 We are committed to providing you with the finest paving
                 materials for your project, and we are proud to offer full
@@ -597,7 +462,7 @@
               </div>
             </div>
             <div
-              class="border border-neon-green/20 rounded-lg mb-4 bg-black/50 accordion-item"
+              class="border border-neon-green/20 bg-black/80 rounded-lg mb-4 bg-black/80 accordion-item"
             >
               <button
                 class="flex justify-between items-center w-full p-5 text-left font-bold text-neon-green hover:bg-black/60 transition duration-300 rounded-lg focus:outline-none"
@@ -611,7 +476,7 @@
                 ></i>
               </button>
               <div
-                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 hidden accordion-content"
+                class="p-5 pt-0 text-gray-300 text-left border-t border-neon-green/10 bg-black/80 hidden accordion-content"
               >
                 Our products undergo certified laboratory testing for
                 compressive strength (MPA) and fully comply with industry
@@ -625,8 +490,7 @@
 
     <div class="h-px bg-neon-green/20 w-4/5 mx-auto my-12"></div>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-custom-black">
+    <section id="products" class="py-20 bg">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2
@@ -642,23 +506,21 @@
         </div>
         <div class="relative w-full max-w-6xl mx-auto mb-16">
           <div
-            class="relative h-[650px] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20"
+            class="relative h-[650px] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20 bg-black/80"
           >
-            <!-- Product Slider Track -->
             <div
               class="relative h-full flex transition-transform duration-500 ease-in-out"
               id="productSlider"
             >
-              <!-- Product 1: Bevel Pavers -->
               <div
                 class="min-w-full h-full flex flex-col items-center p-6 cursor-pointer product-slide"
                 data-product-id="0"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/BOND-PAVER_GREY-SMALL_grande.png"
+                    data-src="photos/BOND-PAVER_GREY-SMALL_grande.png"
                     alt="Bevel Pavers"
                     class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="products"
@@ -684,16 +546,15 @@
                 </div>
               </div>
 
-              <!-- Product 2: Cement Bricks -->
               <div
                 class="min-w-full h-full flex flex-col items-center p-6 cursor-pointer product-slide"
                 data-product-id="1"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Cement brick.png"
+                    data-src="photos/Cement brick.png"
                     alt="Cement Bricks"
                     class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="products"
@@ -718,16 +579,15 @@
                 </div>
               </div>
 
-              <!-- Product 3: Interlocking Paving -->
               <div
                 class="min-w-full h-full flex flex-col items-center p-6 cursor-pointer product-slide"
                 data-product-id="2"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Interlocking Pavers.png"
+                    data-src="photos/Interlocking Pavers.png"
                     alt="Interlocking Paving"
                     class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="products"
@@ -752,16 +612,15 @@
                 </div>
               </div>
 
-              <!-- Product 4: Retaining Blocks -->
               <div
                 class="min-w-full h-full flex flex-col items-center p-6 cursor-pointer product-slide"
                 data-product-id="3"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Retaining blocks.png"
+                    data-src="photos/Retaining blocks.png"
                     alt="Retaining Blocks"
                     class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="products"
@@ -786,16 +645,15 @@
                 </div>
               </div>
 
-              <!-- Product 5: Building Blocks -->
               <div
                 class="min-w-full h-full flex flex-col items-center p-6 cursor-pointer product-slide"
                 data-product-id="4"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Building block.png"
+                    data-src="photos/Building block.png"
                     alt="Building Blocks"
                     class="h-full w-full object-contain lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="products"
@@ -820,21 +678,19 @@
                 </div>
               </div>
             </div>
-            <!-- Product Slider Controls -->
             <button
               id="productPrevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="productNextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
-          <!-- Product Dots (Pagination) -->
           <div
             class="flex justify-center mt-6 space-x-3"
             id="productDotsContainer"
@@ -865,7 +721,6 @@
     </section>
 
     <div class="h-px bg-neon-green/20 w-4/5 mx-auto my-12"></div>
-    <!-- Reviews Section -->
     <section id="reviews" class="py-20">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
@@ -879,9 +734,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <!-- Review 1 -->
           <div
-            class="bg-black/50 p-6 rounded-xl border border-neon-green/20 feature-card"
+            class="bg-black/80 p-6 rounded-xl border border-neon-green/20 bg-black/80 feature-card"
           >
             <div class="flex text-neon-green mb-3">
               <i data-feather="star" class="w-5 h-5 fill-current"></i>
@@ -897,9 +751,8 @@
             </p>
             <p class="text-neon-green font-bold">- Zelmari Steenkamp</p>
           </div>
-          <!-- Review 2 -->
           <div
-            class="bg-black/50 p-6 rounded-xl border border-neon-green/20 feature-card"
+            class="bg-black/80 p-6 rounded-xl border border-neon-green/20 bg-black/80 feature-card"
           >
             <div class="flex text-neon-green mb-3">
               <i data-feather="star" class="w-5 h-5 fill-current"></i>
@@ -915,9 +768,8 @@
             </p>
             <p class="text-neon-green font-bold">- Riaan Pienaar</p>
           </div>
-          <!-- Review 3 -->
           <div
-            class="bg-black/50 p-6 rounded-xl border border-neon-green/20 feature-card"
+            class="bg-black/80 p-6 rounded-xl border border-neon-green/20 bg-black/80 feature-card"
           >
             <div class="flex text-neon-green mb-3">
               <i data-feather="star" class="w-5 h-5 fill-current"></i>
@@ -939,8 +791,7 @@
     </section>
     <div class="h-px bg-neon-green/20 w-4/5 mx-auto my-12"></div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-custom-black">
+    <section id="projects" class="py-20 bg">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2
@@ -956,7 +807,7 @@
         </div>
         <div class="relative w-full max-w-6xl mx-auto mb-16">
           <div
-            class="relative h-[650px] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20"
+            class="relative h-[650px] overflow-hidden rounded-xl shadow-2xl shadow-neon-green/10 border border-neon-green/20 bg-black/80"
           >
             <div
               class="relative h-full flex transition-transform duration-500 ease-in-out"
@@ -967,10 +818,10 @@
                 data-project-id="0"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark1.jpg"
+                    data-src="photos/brugmark1.jpg"
                     alt="Project 1"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1000,10 +851,10 @@
                 data-project-id="1"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark2.jpg"
+                    data-src="photos/brugmark2.jpg"
                     alt="Project 2"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1031,10 +882,10 @@
                 data-project-id="2"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark3.jpg"
+                    data-src="photos/brugmark3.jpg"
                     alt="Project 3"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1065,10 +916,10 @@
                 data-project-id="3"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark4.jpg"
+                    data-src="photos/brugmark4.jpg"
                     alt="Project 4"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1097,10 +948,10 @@
                 data-project-id="4"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/brugmark5.jpg"
+                    data-src="photos/brugmark5.jpg"
                     alt="Project 5"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1129,10 +980,10 @@
                 data-project-id="5"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed1.png"
+                    data-src="photos/unnamed1.png"
                     alt="Project 7"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1162,10 +1013,10 @@
                 data-project-id="6"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed.png"
+                    data-src="photos/unnamed.png"
                     alt="Project 8"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1193,10 +1044,10 @@
                 data-project-id="7"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/unnamed5.png"
+                    data-src="photos/unnamed5.png"
                     alt="Project 9"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1225,10 +1076,10 @@
                 data-project-id="8"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 1.jpeg"
+                    data-src="photos/New project 1.jpeg"
                     alt="Project 10"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1239,7 +1090,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A wide-angle view of the completed paving, showcasing the
@@ -1253,10 +1104,10 @@
                 data-project-id="9"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 2.jpeg"
+                    data-src="photos/New project 2.jpeg"
                     alt="Project 11"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1267,7 +1118,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     Close-up of the interlocking pavers, highlighting the crisp
@@ -1281,10 +1132,10 @@
                 data-project-id="10"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 3.jpeg"
+                    data-src="photos/New project 3.jpeg"
                     alt="Project 12"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1295,7 +1146,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     The paved area in full sunlight, emphasizing the texture and
@@ -1309,10 +1160,10 @@
                 data-project-id="11"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 4.jpeg"
+                    data-src="photos/New project 4.jpeg"
                     alt="Project 13"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1323,7 +1174,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A side perspective showing the smooth transition between
@@ -1338,10 +1189,10 @@
                 data-project-id="12"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 5.jpeg"
+                    data-src="photos/New project 5.jpeg"
                     alt="Project 14"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1352,7 +1203,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A low-angle shot capturing the solid footing and geometric
@@ -1366,10 +1217,10 @@
                 data-project-id="13"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 6.jpeg"
+                    data-src="photos/New project 6.jpeg"
                     alt="Project 15"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1380,7 +1231,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A clean finish along the border, showing attention to detail
@@ -1394,21 +1245,21 @@
                 data-project-id="14"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 7.jpeg"
+                    data-src="photos/New project 7.jpeg"
                     alt="Project 16"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
-                    onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+15';"
+                    onerror="this.onerror=null; this.src='httpss://placehold.co/800x400/050505/39FF14?text=Project+15';"
                   />
                 </div>
                 <div class="text-center flex-1 flex flex-col justify-center">
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     Another day, another happy customer.
@@ -1421,21 +1272,21 @@
                 data-project-id="15"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 8.jpeg"
+                    data-src="photos/New project 8.jpeg"
                     alt="Project 17"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
-                    onerror="this.onerror=null; this.src='https://placehold.co/800x400/050505/39FF14?text=Project+16';"
+                    onerror="this.onerror=null; this.src='httpshttps://placehold.co/800x400/050505/39FF14?text=Project+16';"
                   />
                 </div>
                 <div class="text-center flex-1 flex flex-col justify-center">
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A final overview of the entire installation, reinforcing the
@@ -1449,10 +1300,10 @@
                 data-project-id="16"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 9.jpeg"
+                    data-src="photos/New project 9.jpeg"
                     alt="Project 18"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1463,7 +1314,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A detailed view of the paving joints, showcasing precision
@@ -1477,10 +1328,10 @@
                 data-project-id="17"
               >
                 <div
-                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 hover:border-neon-green/50 transition-all duration-300"
+                  class="h-3/5 w-full flex items-center justify-center mb-4 rounded-lg overflow-hidden border border-neon-green/10 bg-black/80 hover:border-neon-green/50 transition-all duration-300"
                 >
                   <img
-                    data-src="https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/New project 10.jpeg"
+                    data-src="photos/New project 10.jpeg"
                     alt="Project 19"
                     class="h-full w-full object-cover lozad transition-transform duration-500 hover:scale-105 lightbox-trigger"
                     data-gallery="projects"
@@ -1491,7 +1342,7 @@
                   <h3
                     class="text-3xl font-bold mb-3 text-neon-green font-['Orbitron']"
                   >
-                    Latest completed project...
+                    Latest completed projects...
                   </h3>
                   <p class="text-gray-300 text-xl max-w-2xl mx-auto">
                     A clean overhead shot capturing the symmetry and geometric
@@ -1502,13 +1353,13 @@
             </div>
             <button
               id="projectPrevBtn"
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-left" class="w-4 h-4"></i>
             </button>
             <button
               id="projectNextBtn"
-              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/80 text-neon-green p-2 rounded-full hover:bg-black/70 transition duration-300 z-10 hover:scale-110 border border-neon-green/30"
             >
               <i data-feather="chevron-right" class="w-4 h-4"></i>
             </button>
@@ -1597,8 +1448,7 @@
 
     <div class="h-px bg-neon-green/20 w-4/5 mx-auto my-12"></div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-custom-black">
+    <section id="contact" class="py-20 bg">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2
@@ -1615,9 +1465,8 @@
         </div>
 
         <div
-          class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-0 bg-black/50 rounded-xl border border-neon-green/20 shadow-2xl shadow-neon-green/10 overflow-hidden"
+          class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-0 bg-black/80 rounded-xl border border-neon-green/20 bg-black/80 shadow-2xl shadow-neon-green/10 overflow-hidden"
         >
-          <!-- Contact Details -->
           <div
             class="lg:col-span-2 bg-black/40 p-8 flex flex-col justify-center"
           >
@@ -1679,7 +1528,6 @@
               </a>
             </div>
           </div>
-          <!-- Contact Form -->
           <div class="lg:col-span-3 p-8 hovered-element">
             <h3
               class="text-3xl font-bold text-neon-green mb-6 font-['Orbitron']"
@@ -1752,7 +1600,6 @@
                   </button>
                 </div>
               </div>
-              <!-- Message Box for Form Feedback -->
               <div
                 id="formMessage"
                 class="hidden mt-4 p-4 text-center rounded-lg font-bold"
@@ -1762,17 +1609,15 @@
         </div>
       </div>
     </section>
-    <!-- Back to Top Button -->
     <button
       onclick="topFunction()"
       id="backToTopBtn"
       title="Go to top"
-      class="fixed bottom-8 right-8 z-40 p-2 rounded-full bg-black/20 backdrop-blur-sm border border-neon-green/20 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 transition-all duration-300 opacity-0 invisible"
+      class="fixed bottom-8 right-8 z-40 p-2 rounded-full bg-black/80 backdrop-blur-sm border border-neon-green/20 bg-black/80 text-neon-green hover:bg-neon-green/10 hover:border-neon-green/50 transition-all duration-300 opacity-0 invisible"
     >
       <i data-feather="arrow-up" class="w-4 h-4"></i>
     </button>
-    <!-- Footer -->
-    <footer class="bg-custom-black border-t border-neon-green/20 mt-12 py-8">
+    <footer class="bg-custom-black border-t border-neon-green/20 bg-black/80 mt-12 py-8">
       <div class="container mx-auto px-4 text-center">
         <p class="text-sm text-gray-500 font-['Rajdhani']">
           &copy; <span id="currentYear"></span> Albertinia Pavers. All rights
@@ -1805,7 +1650,6 @@
           ></a>
         </div>
 
-        <!-- Added line -->
         <p class="text-center text-gray-400 text-sm mt-4">
           Designed by
           <a
@@ -1818,7 +1662,6 @@
       </div>
     </footer>
 
-    <!-- Product Detail Modal (Initially Hidden) -->
     <div
       id="productModal"
       class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300"
@@ -1841,7 +1684,7 @@
         <div class="h-1 bg-neon-green w-1/3 mb-6 rounded-full"></div>
         <img
           id="modalImage"
-          class="w-full h-auto object-cover mb-6 rounded-lg border border-neon-green/20"
+          class="w-full h-auto object-cover mb-6 rounded-lg border border-neon-green/20 bg-black/80"
           alt="Product Image"
         />
         <p
@@ -1851,7 +1694,7 @@
 
         <div
           id="modalDetails"
-          class="bg-black/50 p-4 rounded-lg border border-neon-green/20"
+          class="bg-black/80 p-4 rounded-lg border border-neon-green/20 bg-black/80"
         >
           <h4 class="text-2xl font-bold text-neon-green mb-3 font-['Orbitron']">
             Key Specifications
@@ -1860,8 +1703,7 @@
             class="list-disc list-inside space-y-2 text-gray-300 pl-4"
             id="modalSpecs"
           >
-            <!-- Specs will be populated here -->
-          </ul>
+            </ul>
         </div>
 
         <a
@@ -1874,7 +1716,6 @@
       </div>
     </div>
 
-    <!-- Image Lightbox Modal -->
     <div
       id="imageLightbox"
       class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300"
@@ -1887,13 +1728,13 @@
       </button>
       <button
         id="prevLightboxBtn"
-        class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/50 transition duration-300 z-[102]"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/80 transition duration-300 z-[102]"
       >
         <i data-feather="chevron-left" class="w-8 h-8"></i>
       </button>
       <button
         id="nextLightboxBtn"
-        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/50 transition duration-300 z-[102]"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-neon-green p-2 rounded-full bg-black/80 transition duration-300 z-[102]"
       >
         <i data-feather="chevron-right" class="w-8 h-8"></i>
       </button>
@@ -1906,552 +1747,12 @@
         />
         <div
           id="lightboxCaption"
-          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black/50 px-4 py-2 rounded-lg"
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg bg-black/80 px-4 py-2 rounded-lg"
         ></div>
       </div>
     </div>
 
-    <script>
-      // --- Data Store for Product Modal ---
-      const productsData = [
-        {
-          name: "Bevel Pavers",
-          description:
-            "Our signature bevel pavers are designed for ease of installation and maximum interlock, making them ideal for high-traffic areas. They feature a bevelled edge for a traditional, clean look and excellent stability.",
-          image:
-            "https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/BOND-PAVER_GREY-SMALL_grande.png",
-          fallbackImage:
-            "https://placehold.co/800x400/050505/39FF14?text=Bevel+Pavers",
-          specs: [
-            "Dimensions: 200mm x 100mm",
-            "Thickness Options: 50mm",
-            "Application: Driveways, Walkways, Patios, Industrial",
-            "Color Options: Charcoal, Grey, Tan, and Red",
-          ],
-        },
-        {
-          name: "Cement Bricks",
-          description:
-            "High-density, structurally sound cement bricks offering superior load-bearing capacity and consistency for robust construction projects. Essential for reliable foundations and walls.",
-          image:
-            "https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Cement brick.png",
-          fallbackImage:
-            "https://placehold.co/800x400/050505/39FF14?text=Cement+Bricks",
-          specs: [
-            "Standard Size: 220mm x 70mm x 113mm",
-            "Material: High-strength cement mix",
-            "Application: Foundations, Walling (structural and non-structural)",
-            "Durability: Excellent weather and wear resistance",
-            "Color Options: Grey, Brown",
-          ],
-        },
-        {
-          name: "Interlocking Pavers",
-          description:
-            "The ultimate solution for industrial and heavy-duty applications. The unique interlocking shape provides exceptional lateral stability, preventing shifting and rutting under heavy loads.",
-          image:
-            "https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Interlocking Pavers.png",
-          fallbackImage:
-            "https://placehold.co/800x400/050505/39FF14?text=Interlocking+Pavers",
-          specs: [
-            "Thickness: 60mm (Standard)",
-            "Shape: 'S'shape for maximum interlock",
-            "Application: Parkings, Industrial Parks, Driveways, etc.",
-            "Color Options: Charcoal, Grey, Tan",
-            "Strength: Designed for extreme load resistance",
-          ],
-        },
-        {
-          name: "Retaining Blocks (D-Shape)",
-          description:
-            "Durable and easy-to-install retaining blocks perfect for building garden tiers, stabilizing slopes, and creating landscape borders. Offers both structural integrity and aesthetic appeal.",
-          image:
-            "https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Retaining blocks.png",
-          fallbackImage:
-            "https://placehold.co/800x400/050505/39FF14?text=Retaining+Blocks",
-          specs: [
-            "Shape: D-Shape/Cornerstone design",
-            "Application: Garden retaining walls, Slope stabilization, Planters",
-            "Stacking: Capable of building high, vertical walls",
-            "Material: Weather-resistant concrete",
-          ],
-        },
-        {
-          name: "Building Blocks (M140)",
-          description:
-            "Cost-effective and large-format building blocks that speed up construction time without compromising on strength. Ideal for boundary walls and internal partitioning.",
-          image:
-            "https://huggingface.co/spaces/UnTam3d/neon-pavers-of-tomorrow/resolve/main/images/Building block.png",
-          fallbackImage:
-            "https://placehold.co/800x400/050505/39FF14?text=Building+Blocks",
-          specs: [
-            "Sizes: 390 mm × 140 mm × 190 mm",
-            "Application: Boundary walls, Garages, Outbuildings",
-            "Quantity: Fewer blocks needed per m² compared to bricks",
-            "Insulation: Provides good thermal mass and sound dampening",
-          ],
-        },
-      ];
-
-      // --- Utility Functions ---
-
-      /**
-       * Initializes all Feather icons on the page.
-       */
-      function initFeatherIcons() {
-        feather.replace();
-      }
-
-      /**
-       * Toggles the mobile navigation menu visibility.
-       */
-      function toggleMobileMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("hidden");
-        const button = document.getElementById("mobileMenuButton");
-        const icon = button.querySelector("i");
-        if (menu.classList.contains("hidden")) {
-          icon.setAttribute("data-feather", "menu");
-        } else {
-          icon.setAttribute("data-feather", "x");
-        }
-        initFeatherIcons(); // Re-render icons after change
-      }
-
-      /**
-       * Toggles the open/closed state of an accordion item.
-       * @param {HTMLElement} button - The button element that was clicked.
-       */
-      function toggleAccordion(button) {
-        const content = button.nextElementSibling;
-        const icon = button.querySelector("i");
-
-        content.classList.toggle("hidden");
-        icon.classList.toggle("rotate-180");
-      }
-
-      /**
-       * Updates the active state of navigation links based on scroll position.
-       */
-      function updateActiveNav() {
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(
-          ".nav-link, .mobile-nav-link"
-        );
-        let current = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 100; // Offset for sticky nav
-          if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-          }
-        });
-      }
-
-      // --- Home Slider Logic ---
-      let currentSlide = 0;
-      const slider = document.getElementById("slider");
-      const slides = slider ? slider.children : [];
-      const totalSlides = slides.length;
-
-      /**
-       * Moves the main image slider to a specific index.
-       * @param {number} index - The index of the slide to move to.
-       */
-      function moveToSlide(index) {
-        if (slider) {
-          currentSlide = (index + totalSlides) % totalSlides;
-          const offset = -currentSlide * 100;
-          slider.style.transform = `translateX(${offset}%)`;
-        }
-      }
-
-      /**
-       * Sets up event listeners for the main image slider controls.
-       */
-      function setupHomeSlider() {
-        document
-          .getElementById("prevBtn")
-          ?.addEventListener("click", () => moveToSlide(currentSlide - 1));
-        document
-          .getElementById("nextBtn")
-          ?.addEventListener("click", () => moveToSlide(currentSlide + 1));
-        // Auto-slide functionality
-        setInterval(() => moveToSlide(currentSlide + 1), 6000); // Change slide every 6 seconds
-      }
-
-      // --- Product Slider Logic ---
-      let currentProductSlide = 0;
-      const productSliderEl = document.getElementById("productSlider");
-      const productSlides = productSliderEl ? productSliderEl.children : [];
-      const totalProductSlides = productSlides.length;
-      const productDots = document.querySelectorAll(
-        "#productDotsContainer .product-dot"
-      );
-
-      /**
-       * Moves the product slider to a specific index and updates the dots.
-       * @param {number} index - The index of the slide to move to.
-       */
-      function moveToProductSlide(index) {
-        if (productSliderEl) {
-          currentProductSlide =
-            (index + totalProductSlides) % totalProductSlides;
-          const offset = -currentProductSlide * 100;
-          productSliderEl.style.transform = `translateX(${offset}%)`;
-
-          productDots.forEach((dot) => {
-            dot.classList.remove("bg-neon-green");
-            dot.classList.add("bg-neon-green/30");
-          });
-          productDots[currentProductSlide]?.classList.add("bg-neon-green");
-          productDots[currentProductSlide]?.classList.remove(
-            "bg-neon-green/30"
-          );
-        }
-      }
-
-      /**
-       * Sets up event listeners for the product slider controls and dots.
-       */
-      function setupProductSlider() {
-        document
-          .getElementById("productPrevBtn")
-          ?.addEventListener("click", () =>
-            moveToProductSlide(currentProductSlide - 1)
-          );
-        document
-          .getElementById("productNextBtn")
-          ?.addEventListener("click", () =>
-            moveToProductSlide(currentProductSlide + 1)
-          );
-
-        productDots.forEach((dot) => {
-          dot.addEventListener("click", (e) => {
-            const slideIndex = parseInt(e.target.getAttribute("data-slide"));
-            moveToProductSlide(slideIndex);
-          });
-        });
-
-        // Initialize the first dot as active
-        if (productDots.length > 0) moveToProductSlide(0);
-      }
-
-      // --- Product Modal Logic ---
-      const modal = document.getElementById("productModal");
-
-      /**
-       * Opens the product detail modal with data for a specific product ID.
-       * @param {number} productId - The index of the product in the productsData array.
-       */
-      function openProductModal(productId) {
-        const product = productsData[productId];
-        if (!product) return;
-
-        document.getElementById("modalTitle").textContent = product.name;
-        document.getElementById("modalImage").src = product.image;
-        // Fallback for image loading errors
-        document.getElementById("modalImage").onerror = function () {
-          this.onerror = null;
-          this.src = product.fallbackImage;
-        };
-        document.getElementById("modalDescription").textContent =
-          product.description;
-
-        const specsList = document.getElementById("modalSpecs");
-        specsList.innerHTML = "";
-        product.specs.forEach((spec) => {
-          const li = document.createElement("li");
-          li.textContent = spec;
-          specsList.appendChild(li);
-        });
-
-        // Show the modal with transition
-        modal.classList.remove("hidden");
-        setTimeout(() => {
-          modal.classList.remove("opacity-0");
-          document.body.style.overflow = "hidden"; // Prevent scrolling background
-        }, 10);
-      }
-
-      /**
-       * Closes the product detail modal.
-       */
-      function closeProductModal() {
-        modal.classList.add("opacity-0");
-        setTimeout(() => {
-          modal.classList.add("hidden");
-          document.body.style.overflow = ""; // Restore scrolling
-        }, 300);
-      }
-
-      /**
-       * Sets up click listeners for all product slides to open the modal.
-       */
-      function setupProductModalListeners() {
-        document.querySelectorAll(".product-slide").forEach((slide) => {
-          // Prevent the lightbox from opening when clicking the product slide itself
-          slide.addEventListener("click", (e) => {
-            if (e.target.classList.contains("lightbox-trigger")) {
-              return; // Let the lightbox handler take over
-            }
-            const productId = parseInt(slide.getAttribute("data-product-id"));
-            openProductModal(productId);
-          });
-        });
-      }
-
-      // --- Contact Form Logic ---
-      function setupContactForm() {
-        const form = document.getElementById("contactForm");
-        if (!form) return;
-        const messageBox = document.getElementById("formMessage");
-
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          try {
-            const response = await fetch(form.action, {
-              method: form.method,
-              body: data,
-              headers: {
-                Accept: "application/json",
-              },
-            });
-            if (response.ok) {
-              messageBox.textContent =
-                "Thank you! Your inquiry has been successfully sent. We will contact you shortly.";
-              messageBox.className =
-                "mt-4 p-4 text-center rounded-lg font-bold bg-green-900/50 text-shock-green border border-shock-green/50";
-              messageBox.classList.remove("hidden");
-              form.reset();
-            } else {
-              throw new Error("Form submission failed");
-            }
-          } catch (error) {
-            messageBox.textContent =
-              "Oops! There was a problem submitting your form. Please try again later.";
-            messageBox.className =
-              "mt-4 p-4 text-center rounded-lg font-bold bg-red-900/50 text-red-400 border border-red-400/50";
-            messageBox.classList.remove("hidden");
-          } finally {
-            setTimeout(() => {
-              messageBox.classList.add("hidden");
-            }, 8000);
-          }
-        });
-      }
-      // --- Project Slider Logic ---
-      let currentProjectSlide = 0;
-      const projectSliderEl = document.getElementById("projectSliderEl");
-      const projectSlides = projectSliderEl ? projectSliderEl.children : [];
-      const totalProjectSlides = projectSlides.length;
-      const projectDots = document.querySelectorAll(
-        "#projectDotsContainer .project-dot"
-      );
-
-      /**
-       * Moves the project slider to a specific index and updates the dots.
-       * @param {number} index - The index of the slide to move to.
-       */
-      function moveToProjectSlide(index) {
-        if (projectSliderEl) {
-          currentProjectSlide =
-            (index + totalProjectSlides) % totalProjectSlides;
-          const offset = -currentProjectSlide * 100;
-          projectSliderEl.style.transform = `translateX(${offset}%)`;
-
-          projectDots.forEach((dot) => {
-            dot.classList.remove("bg-neon-green");
-            dot.classList.add("bg-neon-green/30");
-          });
-          projectDots[currentProjectSlide]?.classList.add("bg-neon-green");
-          projectDots[currentProjectSlide]?.classList.remove(
-            "bg-neon-green/30"
-          );
-        }
-      }
-
-      /**
-       * Sets up event listeners for the project slider controls and dots.
-       */
-      function setupProjectSlider() {
-        document
-          .getElementById("projectPrevBtn")
-          ?.addEventListener("click", () =>
-            moveToProjectSlide(currentProjectSlide - 1)
-          );
-        document
-          .getElementById("projectNextBtn")
-          ?.addEventListener("click", () =>
-            moveToProjectSlide(currentProjectSlide + 1)
-          );
-
-        projectDots.forEach((dot) => {
-          dot.addEventListener("click", (e) => {
-            const slideIndex = parseInt(e.target.getAttribute("data-slide"));
-            moveToProjectSlide(slideIndex);
-          });
-        });
-
-        // Initialize the first dot as active
-        if (projectDots.length > 0) moveToProjectSlide(0);
-      }
-
-      // --- Image Lightbox Logic ---
-      const lightbox = document.getElementById("imageLightbox");
-      const lightboxImage = document.getElementById("lightboxImage");
-      const lightboxCaption = document.getElementById("lightboxCaption");
-      const closeLightboxBtn = document.getElementById("closeLightboxBtn");
-      const prevLightboxBtn = document.getElementById("prevLightboxBtn");
-      const nextLightboxBtn = document.getElementById("nextLightboxBtn");
-
-      let currentImageIndex;
-      let currentGallery = [];
-
-      function openLightbox(e) {
-        const clickedImage = e.target;
-        const galleryName = clickedImage.getAttribute("data-gallery");
-        if (!galleryName) return;
-
-        currentGallery = Array.from(
-          document.querySelectorAll(
-            `.lightbox-trigger[data-gallery="${galleryName}"]`
-          )
-        );
-        currentImageIndex = currentGallery.indexOf(clickedImage);
-
-        updateLightboxImage();
-
-        lightbox.classList.remove("hidden");
-        setTimeout(() => lightbox.classList.remove("opacity-0"), 10);
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeLightbox() {
-        lightbox.classList.add("opacity-0");
-        setTimeout(() => lightbox.classList.add("hidden"), 300);
-        document.body.style.overflow = "";
-      }
-
-      function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
-        updateLightboxImage();
-      }
-
-      function showPrevImage() {
-        currentImageIndex =
-          (currentImageIndex - 1 + currentGallery.length) %
-          currentGallery.length;
-        updateLightboxImage();
-      }
-
-      function updateLightboxImage() {
-        const imageElement = currentGallery[currentImageIndex];
-        const imageSrc =
-          imageElement.getAttribute("data-src") || imageElement.src;
-        lightboxImage.src = imageSrc;
-        lightboxCaption.textContent = `${currentImageIndex + 1} / ${
-          currentGallery.length
-        }`;
-      }
-
-      function setupLightbox() {
-        document.querySelectorAll(".lightbox-trigger").forEach((img) => {
-          img.addEventListener("click", openLightbox);
-        });
-
-        closeLightboxBtn.addEventListener("click", closeLightbox);
-        lightbox.addEventListener("click", (e) => {
-          if (e.target === lightbox) closeLightbox();
-        });
-        nextLightboxBtn.addEventListener("click", showNextImage);
-        prevLightboxBtn.addEventListener("click", showPrevImage);
-
-        // Keyboard navigation
-        document.addEventListener("keydown", (e) => {
-          if (!lightbox.classList.contains("hidden")) {
-            if (e.key === "ArrowRight") showNextImage();
-            if (e.key === "ArrowLeft") showPrevImage();
-            if (e.key === "Escape") closeLightbox();
-          }
-        });
-      }
-
-      // Back to Top Button Logic
-      const backToTopBtn = document.getElementById("backToTopBtn");
-
-      window.onscroll = function () {
-        scrollFunction();
-        updateActiveNav(); // Keep existing scroll handler
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 300 ||
-          document.documentElement.scrollTop > 300
-        ) {
-          backToTopBtn.classList.remove("opacity-0", "invisible");
-          backToTopBtn.classList.add("opacity-100", "visible");
-        } else {
-          backToTopBtn.classList.remove("opacity-100", "visible");
-          backToTopBtn.classList.add("opacity-0", "invisible");
-        }
-      }
-
-      function topFunction() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-
-      // --- Main Initialization ---
-      window.onload = function () {
-        document.getElementById("currentYear").textContent =
-          new Date().getFullYear();
-
-        // 1. Initialize Feather Icons
-        initFeatherIcons();
-
-        // 2. Initialize Lozad.js (Lazy Loader) for images
-        const observer = lozad(".lozad", {
-          loaded: function (el) {
-            // Once an image is loaded, it can be part of the lightbox
-            el.classList.add("lightbox-trigger");
-            // Re-setup lightbox to include newly loaded images
-            setupLightbox();
-          },
-        });
-        observer.observe();
-
-        // 3. Setup Event Listeners
-        document
-          .getElementById("mobileMenuButton")
-          ?.addEventListener("click", toggleMobileMenu);
-        window.addEventListener("scroll", updateActiveNav);
-        setupHomeSlider();
-        setupProductSlider();
-        setupProjectSlider();
-        setupProductModalListeners();
-        setupContactForm();
-        setupLightbox(); // Initial setup for non-lazy images
-
-        // 4. Close mobile menu on link click
-        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
-          link.addEventListener("click", toggleMobileMenu);
-        });
-
-        // Initial check for active nav link on page load
-        updateActiveNav();
-      };
-    </script>
+    <script src="script.js"></script>
+    
   </body>
 </html>
