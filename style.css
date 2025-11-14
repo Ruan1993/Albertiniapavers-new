@@ -137,12 +137,14 @@ html {
 #productModal #productModalContent.modal-compact #modalDescription { font-size: 1rem !important; }
 #productModal #productModalContent.modal-compact #modalDetails h4 { font-size: 1.25rem !important; }
 #productModal #productModalContent.modal-compact #modalSpecs { font-size: 0.95rem !important; }
-#productModal #productModalContent.modal-compact #modalImage { max-height: 45svh !important; }
+#productModal #productModalContent.modal-compact #modalImage { max-height: 35svh !important; }
 #productModal #productModalContent.modal-compact-2 #modalTitle { font-size: 2rem !important; }
 #productModal #productModalContent.modal-compact-2 #modalDescription { font-size: 0.95rem !important; }
 #productModal #productModalContent.modal-compact-2 #modalDetails h4 { font-size: 1.15rem !important; }
 #productModal #productModalContent.modal-compact-2 #modalSpecs { font-size: 0.9rem !important; }
-#productModal #productModalContent.modal-compact-2 #modalImage { max-height: 40svh !important; }
+#productModal #productModalContent.modal-compact-2 #modalImage { max-height: 30svh !important; }
+#productModal #productModalContent.image-compact #modalImage { max-height: 35svh !important; }
+#productModal #productModalContent.image-compact-2 #modalImage { max-height: 30svh !important; }
 /* Contrast improvements */
 .text-gray-300 { color: #e6e6e6 !important; }
 .text-gray-400 { color: #d9d9d9 !important; }

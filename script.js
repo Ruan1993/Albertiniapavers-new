@@ -301,12 +301,18 @@ function setupProductModalListeners() {
 function applyModalFit() {
   const el = document.getElementById("productModalContent");
   if (!el) return;
-  el.classList.remove("modal-compact", "modal-compact-2");
+  el.classList.remove("image-compact", "image-compact-2", "modal-compact", "modal-compact-2");
+  if (el.scrollHeight > el.clientHeight) {
+    el.classList.add("image-compact");
+  }
+  if (el.scrollHeight > el.clientHeight) {
+    el.classList.add("image-compact-2");
+  }
   if (el.scrollHeight > el.clientHeight) {
     el.classList.add("modal-compact");
-    if (el.scrollHeight > el.clientHeight) {
-      el.classList.add("modal-compact-2");
-    }
+  }
+  if (el.scrollHeight > el.clientHeight) {
+    el.classList.add("modal-compact-2");
   }
 }
 
