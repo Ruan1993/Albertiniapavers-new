@@ -254,11 +254,16 @@ function openProductModal(productId) {
     specsList.appendChild(li);
   });
 
-  // Show the modal with transition
+  // Show the modal with transition and fit to viewport
+  const modalContent = document.getElementById("productModalContent");
+  modalContent?.classList.remove("modal-compact", "modal-compact-2");
   modal.classList.remove("hidden");
   setTimeout(() => {
     modal.classList.remove("opacity-0");
-    document.body.style.overflow = "hidden"; // Prevent scrolling background
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => {
+      applyModalFit();
+    });
   }, 10);
 }
 
@@ -269,7 +274,11 @@ function closeProductModal() {
   modal.classList.add("opacity-0");
   setTimeout(() => {
     modal.classList.add("hidden");
-    document.body.style.overflow = ""; // Restore scrolling
+    document.body.style.overflow = "";
+    document.getElementById("productModalContent")?.classList.remove(
+      "modal-compact",
+      "modal-compact-2"
+    );
   }, 300);
 }
 
@@ -287,6 +296,18 @@ function setupProductModalListeners() {
       openProductModal(productId);
     });
   });
+}
+
+function applyModalFit() {
+  const el = document.getElementById("productModalContent");
+  if (!el) return;
+  el.classList.remove("modal-compact", "modal-compact-2");
+  if (el.scrollHeight > el.clientHeight) {
+    el.classList.add("modal-compact");
+    if (el.scrollHeight > el.clientHeight) {
+      el.classList.add("modal-compact-2");
+    }
+  }
 }
 
 // --- Contact Form Logic ---
@@ -469,10 +490,18 @@ function setupLightbox() {
 // Back to Top Button Logic
 const backToTopBtn = document.getElementById("backToTopBtn");
 
-window.onscroll = function () {
-  scrollFunction();
-  updateActiveNav(); // Keep existing scroll handler
-};
+let __scrollTicking = false;
+function onScrollHandler() {
+  if (!__scrollTicking) {
+    __scrollTicking = true;
+    requestAnimationFrame(() => {
+      scrollFunction();
+      updateActiveNav();
+      __scrollTicking = false;
+    });
+  }
+}
+window.addEventListener("scroll", onScrollHandler, { passive: true });
 
 function scrollFunction() {
   if (
@@ -505,10 +534,8 @@ window.onload = function () {
   // 2. Initialize Lozad.js (Lazy Loader) for images
   const observer = lozad(".lozad", {
     loaded: function (el) {
-      // Once an image is loaded, it can be part of the lightbox
       el.classList.add("lightbox-trigger");
-      // Re-setup lightbox to include newly loaded images
-      setupLightbox();
+      el.addEventListener("click", openLightbox);
     },
   });
   observer.observe();
@@ -517,7 +544,7 @@ window.onload = function () {
   document
     .getElementById("mobileMenuButton")
     ?.addEventListener("click", toggleMobileMenu);
-  window.addEventListener("scroll", updateActiveNav);
+
   setupHomeSlider();
   setupProductSlider();
   setupProjectSlider();
